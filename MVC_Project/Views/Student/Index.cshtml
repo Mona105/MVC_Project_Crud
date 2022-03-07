@@ -1,0 +1,14 @@
+﻿@model  IEnumerable<MVC_Project.Models.Locations>
+@{
+}
+<table class="table table-bordered">
+    <tr>
+        <th>Locations</th>
+    </tr>
+    @foreach(var location in Model)
+            {
+                <tr>
+                    <td><a asp-action="StudentList" asp-controller="Student" asp-route-id="@location.Id">@location.Place</a></td>
+                </tr>
+            }
+</table>

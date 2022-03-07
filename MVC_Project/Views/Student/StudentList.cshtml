@@ -1,0 +1,27 @@
+﻿   @model IEnumerable<MVC_Project.Models.Students>
+@{
+}
+@if(Model.Count()<= 0)
+            {
+                <p class="text-center text-danger">Customer was not found at this location</p>
+            }
+
+<table class="table table-bordered">
+    <tr>
+      
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+    </tr>
+    @foreach(var stu in Model)
+            {
+                <tr>
+                    <td>@stu.Name</td>
+                    <td>@stu.Email</td>
+                    <td>@stu.Gender</td>
+                    <td>@stu.Mobile</td>
+                </tr>
+            }
+</table>
+}
